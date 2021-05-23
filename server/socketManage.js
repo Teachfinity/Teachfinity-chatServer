@@ -9,7 +9,7 @@ module.exports = io => socket => {
     
     socket.on( events.IS_USER, ( nickname, cb ) => {
         console.log("methods.createUSer")
-        methods.isUser( users, nickname ) ? cb({ isUser: true, user: null }) :
+      /*   methods.isUser( users, nickname ) ? cb({ isUser: false, user: "zaibi" }) : */
         cb({ isUser: false, user: methods.createUser( nickname, socket.id )})
     }) 
     
@@ -78,3 +78,4 @@ module.exports = io => socket => {
         }
     })
 }
+
